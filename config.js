@@ -1,0 +1,4 @@
+module.exports = {
+  'secret' : 'JSON-web-token-secret',
+  'database' : 'mongodb://localhost/test'
+}
