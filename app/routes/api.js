@@ -41,6 +41,9 @@ apiRoutes.post('/authenticate', function(req, res) {
         // create a token
         var userIdentity = {"name": user.name};
         var token = jwt.sign(userIdentity, config.secret, {
+          expiresIn : 6*60*60,
+          //iss: 'James Bond Inc.', //not supported in nodeJS so far :-(
+          //permissions: ['create-new-users','delete-users','edit-users'] //not supported in nodeJS so far :-(
           //expiresInMinutes: 1440 // expires in 24 hours
         });
 
